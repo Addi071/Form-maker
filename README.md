@@ -26,8 +26,7 @@ A full-stack Form Maker web application that allows users to create customizable
 
 ### Frontend:
 - React.js
-- Axios
-- Tailwind CSS / Bootstrap (if used)
+- Bootstrap
 - React Router
 
 ### Backend:
@@ -39,14 +38,6 @@ A full-stack Form Maker web application that allows users to create customizable
 - Multer (for file uploads)
 - GridFS (for storing uploaded files in MongoDB)
 - JWT / Session (for admin auth, if implemented)
+- Mongo db
 
 ---
-
-## 📸 Screenshots
-
-> _(Add relevant screenshots here if available — dashboard, form creation, response view, etc.)_
-
----
-
-## 📂 Folder Structure
-
