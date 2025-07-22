@@ -1,6 +1,6 @@
 # 📝 Form Maker Website
 
-A full-stack Form Maker web application that allows users to create customizable forms, share them via links, and view collected responses. Designed for surveys, feedback collection, and data analysis.
+A full-stack Form Maker web application that allows users to create customizable forms, share them via links, and view collected responses. Designed for surveys, feedback collection, and data analysis. 
 
 ---
 
