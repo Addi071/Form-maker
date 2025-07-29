@@ -21,7 +21,7 @@ export const Login = () => {
 }
 
   const loguser = async() =>{
-    let result = await fetch('http://localhost:6060/api/user/login',{
+    let result = await fetch('https://form-maker-backend.onrender.com/api/user/login',{
         method:'post',
         body:JSON.stringify({email,password}),
       headers:{
