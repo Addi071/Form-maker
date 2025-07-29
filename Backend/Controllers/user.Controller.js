@@ -1,5 +1,5 @@
 // backend/controllers/user.controller.js
-import { createUserService, getAllUsersService, createUserOne, findUserByEmail, validatePassword } from '../services/user.Service.js';
+import { createUserService, getAllUsersService, createUserOne, findUserByEmail, validatePassword } from '../Services/user.Service.js';
 
 export const createUser = async (req, res) => {
   const { email, password } = req.body;
