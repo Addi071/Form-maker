@@ -15,13 +15,13 @@ function MySurveys() {
     const fetchSurveys = async () => {
       try {
         setIsLoading(true);
-        const res = await fetch(`http://localhost:6060/survey/admin/${adminId}`);
+        const res = await fetch(`https://form-maker-backend.onrender.com/survey/admin/${adminId}`);
         const data = await res.json();
         setSurveys(data || []);
 
         const counts = {};
         for (const survey of data) {
-          const resCount = await fetch(`http://localhost:6060/api/responses/${survey._id}/count`);
+          const resCount = await fetch(`https://form-maker-backend.onrender.com/api/responses/${survey._id}/count`);
           const result = await resCount.json();
           counts[survey._id] = result.count || 0;
         }
@@ -41,7 +41,7 @@ function MySurveys() {
     if (!confirm) return;
 
     try {
-      const res = await fetch(`http://localhost:6060/survey/${id}`, {
+      const res = await fetch(`https://form-maker-backend.onrender.com/survey/${id}`, {
         method: "DELETE",
       });
       if (res.ok) {
@@ -63,7 +63,7 @@ function MySurveys() {
   };
 
   const handleDownloadCSV = (surveyId) => {
-    window.open(`http://localhost:6060/api/responses/${surveyId}/download`, "_blank");
+    window.open(`https://form-maker-backend.onrender.com/api/responses/${surveyId}/download`, "_blank");
   };
 
   if (isLoading) {
