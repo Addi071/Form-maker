@@ -144,7 +144,7 @@ function CreateSurveyForm() {
       return;
     }
 
-    const res = await fetch("http://localhost:6060/survey", {
+    const res = await fetch("https://form-maker-backend.onrender.com/survey", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ title, description, questions, adminId }),
