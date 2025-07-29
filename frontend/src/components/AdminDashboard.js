@@ -20,7 +20,7 @@ function AdminDashboard() {
   useEffect(() => {
     const fetchSurveys = async () => {
       try {
-        const res = await fetch(`http://localhost:6060/survey/admin/${adminId}`);
+        const res = await fetch(`https://form-maker-backend.onrender.com/survey/admin/${adminId}`);
         const data = await res.json();
         setSurveys(data||[]);
         console.log("survey Data is: ",data)
