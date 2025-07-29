@@ -8,7 +8,7 @@ function UpdateSurvey() {
   const [questions, setQuestions] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:6060/survey/${id}`)
+    fetch(`https://form-maker-backend.onrender.com/survey/${id}`)
       .then((res) => res.json())
       .then((data) => {
         setSurvey(data);
@@ -54,7 +54,7 @@ function UpdateSurvey() {
     e.preventDefault();
     const updatedSurvey = { ...survey, questions };
 
-    const res = await fetch(`http://localhost:6060/survey/${id}`, {
+    const res = await fetch(`https://form-maker-backend.onrender.com/survey/${id}`, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(updatedSurvey),
