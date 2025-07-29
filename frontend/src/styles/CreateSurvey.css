@@ -1,0 +1,187 @@
+/* Create Survey Form Styles - Sky Blue Theme */
+.survey-create-container {
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #e6f7ff;
+  padding: 30px;
+  font-family: 'Arial', sans-serif;
+  box-sizing: border-box;
+}
+
+.survey-create-form {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 150, 255, 0.15);
+  padding: 30px;
+  width: 100%;
+  max-width: 800px;
+  box-sizing: border-box;
+  overflow: hidden; /* Ensures children don't overflow */
+}
+
+.survey-create-title {
+  color: #0077cc;
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 28px;
+  border-bottom: 2px solid #e6f2ff;
+  padding-bottom: 15px;
+  word-wrap: break-word;
+  max-width: 100%;
+}
+
+.survey-input, .question-input, .option-input {
+  width: calc(100% - 30px); /* Account for padding */
+  padding: 12px 15px;
+  margin-bottom: 15px;
+  border: 1px solid #cce7ff;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+.survey-textarea {
+  width: calc(100% - 30px); /* Account for padding */
+  padding: 12px 15px;
+  margin-bottom: 20px;
+  border: 1px solid #cce7ff;
+  border-radius: 6px;
+  font-size: 16px;
+  resize: vertical;
+  min-height: 100px;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+.question-card {
+  background-color: #f8fcff;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-left: 4px solid #0077cc;
+  box-sizing: border-box;
+  overflow: hidden;
+  width: calc(100% - 40px); /* Account for padding */
+}
+
+.question-select {
+  width: calc(100% - 30px); /* Account for padding */
+  padding: 10px 15px;
+  margin-bottom: 15px;
+  border: 1px solid #cce7ff;
+  border-radius: 6px;
+  font-size: 16px;
+  background-color: white;
+  color: #333;
+  cursor: pointer;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+.options-container {
+  margin: 15px 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.option-input-group {
+  margin-bottom: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.add-option-btn, .add-question-btn {
+  background-color: #e6f2ff;
+  color: #0077cc;
+  border: 1px dashed #0077cc;
+  padding: 8px 15px;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 5px;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+.remove-question-btn {
+  background-color: #ffe6e6;
+  color: #cc0000;
+  border: 1px solid #ffcccc;
+  padding: 8px 15px;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+.submit-survey-btn {
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: block;
+  margin: 25px auto 0;
+  width: 200px;
+  text-align: center;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .survey-create-container {
+    padding: 20px;
+  }
+  
+  .survey-create-form {
+    padding: 25px;
+  }
+  
+  .survey-input, .question-input, .option-input,
+  .survey-textarea, .question-select {
+    width: calc(100% - 24px);
+  }
+  
+  .question-card {
+    width: calc(100% - 30px);
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .survey-create-container {
+    padding: 15px;
+  }
+  
+  .survey-create-form {
+    padding: 20px;
+  }
+  
+  .survey-input, .question-input, .option-input,
+  .survey-textarea, .question-select {
+    width: calc(100% - 20px);
+  }
+  
+  .question-card {
+    width: calc(100% - 24px);
+    padding: 12px;
+  }
+  
+  .submit-survey-btn {
+    width: 100%;
+    padding: 12px;
+  }
+}

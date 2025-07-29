@@ -1,0 +1,172 @@
+/* Sky Blue & White Theme */
+:root {
+  --sky-blue: #87CEEB;
+  --sky-blue-dark: #5F9EA0;
+  --pure-white: #FFFFFF;
+  --light-gray: #F5F5F5;
+  --dark-text: #333333;
+}
+
+/* Container setup - allows scrolling */
+.register-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Changed from center to flex-start */
+  min-height: 100vh;
+  background: linear-gradient(
+    to bottom right,
+    var(--sky-blue) 0%,
+    var(--pure-white) 100%
+  );
+  padding: 20px;
+  box-sizing: border-box;
+  overflow-y: auto; /* Enable vertical scrolling */
+}
+
+/* Card with fixed height and internal scroll */
+.register-card {
+  background: var(--pure-white);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 450px;
+  max-height: 90vh; /* Limit card height */
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(135, 206, 235, 0.2);
+}
+
+/* Scrollable form area */
+.register-form {
+  overflow-y: auto; /* Enable scroll only for form */
+  padding-right: 10px; /* Prevent content from touching scrollbar */
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+
+/* Custom scrollbar for form */
+.register-form::-webkit-scrollbar {
+  width: 8px;
+}
+
+.register-form::-webkit-scrollbar-track {
+  background: rgba(135, 206, 235, 0.1);
+  border-radius: 10px;
+}
+
+.register-form::-webkit-scrollbar-thumb {
+  background: var(--sky-blue);
+  border-radius: 10px;
+}
+
+.register-form::-webkit-scrollbar-thumb:hover {
+  background: var(--sky-blue-dark);
+}
+
+/* Rest of your styles remain the same */
+.register-title {
+  color: var(--dark-text);
+  margin-bottom: 10px;
+  font-size: 28px;
+  background: linear-gradient(to right, var(--sky-blue), var(--sky-blue-dark));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.register-subtitle {
+  color: var(--sky-blue-dark);
+  margin-bottom: 20px;
+}
+
+.input-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--sky-blue-dark);
+  font-weight: 500;
+}
+
+.input-group input, 
+.input-group textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 2px solid rgba(135, 206, 235, 0.3);
+  border-radius: 8px;
+  font-size: 16px;
+  transition: all 0.3s;
+  background-color: var(--light-gray);
+  box-sizing: border-box;
+}
+
+.input-group textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+  border-color: var(--sky-blue);
+  background-color: var(--pure-white);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(135, 206, 235, 0.2);
+}
+
+.terms-group {
+  display: flex;
+  align-items: center;
+  margin: 15px 0;
+}
+
+.terms-group input {
+  margin-right: 10px;
+}
+
+.terms-group label {
+  color: var(--sky-blue-dark);
+  font-size: 14px;
+}
+
+.register-button {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(to right, var(--sky-blue), var(--sky-blue-dark));
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.register-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(135, 206, 235, 0.4);
+}
+
+.register-footer {
+  margin-top: 15px;
+  color: var(--sky-blue-dark);
+  text-align: center;
+  padding-top: 15px;
+  border-top: 1px solid rgba(135, 206, 235, 0.3);
+}
+
+.register-footer a {
+  color: var(--sky-blue);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.register-footer a:hover {
+  color: var(--sky-blue-dark);
+  text-decoration: underline;
+}

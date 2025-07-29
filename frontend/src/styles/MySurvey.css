@@ -1,0 +1,248 @@
+.my-surveys-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.page-title {
+  color: #0077b6;
+  text-align: center;
+  margin-bottom: 2.5rem;
+  font-size: 2.5rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.page-title::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #00b4d8, #90e0ef);
+  margin: 0.5rem auto 0;
+  border-radius: 2px;
+}
+
+.survey-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-top: 1.5rem;
+  align-items: stretch; /* Ensure all cards stretch to same height */
+}
+
+.survey-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 180, 216, 0.1);
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  border-top: 4px solid #00b4d8;
+  display: flex;
+  flex-direction: column;
+  height: auto; /* Changed from 100% to auto */
+  min-height: 300px; /* Set a minimum height */
+  overflow: hidden; /* Prevent content from overflowing */
+}
+
+.survey-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 180, 216, 0.15);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.card-header h3 {
+  color: #0077b6;
+  margin: 0;
+  font-size: 1.4rem;
+  flex: 1;
+}
+
+.response-count {
+  background: #e3f6ff;
+  color: #0077b6;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.survey-my-description {
+  color: #555;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+  flex-grow: 1;
+  overflow-wrap: break-word; /* Break long words */
+  word-break: break-word; /* Ensure words break if needed */
+}
+
+.survey-meta {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+  padding: 0.8rem 0;
+  border-top: 1px dashed #caf0f8;
+  border-bottom: 1px dashed #caf0f8;
+}
+
+.meta-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.meta-label {
+  font-size: 0.8rem;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.meta-value {
+  font-weight: 600;
+  color: #0077b6;
+  font-size: 1.1rem;
+}
+
+.survey-actions {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.8rem;
+  margin-top: auto;
+  padding-top: 1rem; /* Add some spacing */
+}
+
+.action-btn {
+  border: none;
+  padding: 0.6rem;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+}
+
+.action-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+.preview-btn {
+  background: #e3f6ff;
+  color: #0077b6;
+}
+
+.responses-btn {
+  background: #d0f0fd;
+  color: #006494;
+}
+
+.copy-btn {
+  background: #c4e8ff;
+  color: #005b8c;
+}
+
+.download-btn {
+  background: #b8e1ff;
+  color: #00507a;
+}
+
+.update-btn {
+  background: #acdaff;
+  color: #004567;
+}
+
+.delete-btn {
+  background: #ffd6d6;
+  color: #c00000;
+  grid-column: span 2;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 3rem 2rem;
+  background: #f8fdff;
+  border-radius: 12px;
+  border: 2px dashed #caf0f8;
+  max-width: 600px;
+  margin: 2rem auto;
+}
+
+.empty-state-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #00b4d8;
+}
+
+.empty-state h3 {
+  color: #0077b6;
+  margin-bottom: 0.5rem;
+}
+
+.empty-state p {
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+.create-survey-btn {
+  background: linear-gradient(135deg, #00b4d8, #0096c7);
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 30px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.create-survey-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 180, 216, 0.3);
+}
+
+.loading-spinner {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #00b4d8;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin: 2rem auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.survey-card {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+.action-btn {
+  transition: all 0.3s ease;
+}
+
+.create-survey-btn {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(0, 180, 216, 0.4); }
+  70% { box-shadow: 0 0 0 10px rgba(0, 180, 216, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(0, 180, 216, 0); }
+}
