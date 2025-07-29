@@ -75,7 +75,7 @@ function SurveyResponses() {
 
   useEffect(() => {
     setIsLoading(true);
-    fetch(`http://localhost:6060/api/responses/${surveyId}`)
+    fetch(`https://form-maker-backend.onrender.com/api/responses/${surveyId}`)
       .then((res) => res.json())
       .then((data) => {
         setResponses(data);
@@ -87,7 +87,7 @@ function SurveyResponses() {
       });
   }, [surveyId]);
 
-  const getFileUrl = (filename) => `http://localhost:6060/uploads/${filename}`;
+  const getFileUrl = (filename) => `https://form-maker-backend.onrender.com/uploads/${filename}`;
 
   if (isLoading) {
     return <div className="loading-container">Loading responses...</div>;
