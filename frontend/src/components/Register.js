@@ -18,7 +18,7 @@ export const Register = () => {
 
 
    const adduser = async ()=>{
-      const result = await fetch('http://localhost:6060/api/user/signup',{
+      const result = await fetch('https://form-maker-backend.onrender.com/api/user/signup',{
         method:'post',
         body:JSON.stringify({name,email,password}),
       headers:{
