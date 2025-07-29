@@ -175,7 +175,7 @@ function SurveyAnswerForm() {
 
   useEffect(() => {
     if (!hasSubmitted) {
-      fetch(`http://localhost:6060/survey/${id}`)
+      fetch(`https://form-maker-backend.onrender.com/survey/${id}`)
         .then((res) => res.json())
         .then((data) => setSurvey(data));
     }
@@ -205,7 +205,7 @@ function SurveyAnswerForm() {
     });
 
     try {
-      const res = await fetch("http://localhost:6060/api/responses", {
+      const res = await fetch("https://form-maker-backend.onrender.com/api/responses", {
         method: "POST",
         body: formData,
       });
