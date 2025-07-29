@@ -1,4 +1,4 @@
-import Response from "../models/response.model.js"; 
+import Response from "../Models/response.model.js"; 
 import { getResponsesBySurveyId } from "../Services/response.Service.js";
 import { Parser } from "json2csv";
 
