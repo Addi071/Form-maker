@@ -8,7 +8,7 @@ export default function SurveyForm() {
   const [answers, setAnswers] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/api/surveys/${id}`)
+    fetch(`https://form-maker-backend.onrender.com/api/surveys/${id}`)
       .then((res) => res.json())
       .then((data) => {
         setSurvey(data);
@@ -29,7 +29,7 @@ export default function SurveyForm() {
       answer: answers[i],
     }));
 
-    const res = await fetch(`http://localhost:5000/api/surveys/${id}/submit`, {
+    const res = await fetch(`https://form-maker-backend.onrender.com/api/surveys/${id}/submit`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ answers: responsePayload }),
