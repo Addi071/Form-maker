@@ -12,16 +12,16 @@ export const Login = () => {
  
  
 
-  function setWithExpiry(key, value, ttl) {
-  const now = new Date();
+//   function setWithExpiry(key, value, ttl) {
+//   const now = new Date();
 
-  const item = {
-    value: value,
-    expiry: now.getTime() + ttl,
-  };
+//   const item = {
+//     value: value,
+//     expiry: now.getTime() + ttl,
+//   };
 
-  localStorage.setItem(key, JSON.stringify(item));
-}
+//   localStorage.setItem(key, JSON.stringify(item));
+// }
 
   const loguser = async() =>{
     let result = await fetch(`${config.BACKEND_URI}/api/user/login`,{
