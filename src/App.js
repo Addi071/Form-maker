@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './styles/Login.css'
 import './styles/Register.css'
 import './App.css';
@@ -18,7 +17,6 @@ import FormMakerLanding from './components/FormMakerLanding';
 import { Login } from './components/Login';
 import { Register } from './components/Register';
 import { Privatecomp } from './components/Privatecomp';
-import CreateSurvey from './components/CreateSurvey';
 import Navbar from './components/Navbar';
 import AdminDashboard from './components/AdminDashboard';
 import CreateSurveyForm from './components/CreateSurveyForm';
