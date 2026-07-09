@@ -1,7 +1,7 @@
 
 
 const config = {
-    BACKEND_URI:"http://localhost:6060"
+    BACKEND_URI:"https://form-maker-backend.onrender.com"
 }
 
 export default config;
