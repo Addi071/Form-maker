@@ -1,0 +1,138 @@
+/* Sky Blue & White Theme */
+:root {
+  --sky-blue: #87CEEB;
+  --sky-blue-dark: #5F9EA0;
+  --pure-white: #FFFFFF;
+  --light-gray: #F5F5F5;
+  --dark-text: #333333;
+}
+
+/* Hide scrollbars for all elements */
+html, body {
+  /* overflow: hidden; Hides scrollbars on both axes */
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(
+    to bottom right,
+    var(--sky-blue) 0%,
+    var(--pure-white) 100%
+  );
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.login-card {
+  background: var(--pure-white);
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(135, 206, 235, 0.2);
+}
+
+.login-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(135, 206, 235, 0.2);
+}
+
+.login-title {
+  color: var(--dark-text);
+  margin-bottom: 10px;
+  font-size: 28px;
+  background: linear-gradient(to right, var(--sky-blue), var(--sky-blue-dark));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.login-subtitle {
+  color: var(--sky-blue-dark);
+  margin-bottom: 30px;
+}
+
+.input-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--sky-blue-dark);
+  font-weight: 500;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 2px solid rgba(135, 206, 235, 0.3);
+  border-radius: 8px;
+  font-size: 16px;
+  transition: all 0.3s;
+  background-color: var(--light-gray);
+}
+
+.input-group input:focus {
+  border-color: var(--sky-blue);
+  background-color: var(--pure-white);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(135, 206, 235, 0.2);
+}
+
+.login-button {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(to right, var(--sky-blue), var(--sky-blue-dark));
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-top: 10px;
+}
+
+.login-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(135, 206, 235, 0.4);
+}
+
+.login-footer {
+  margin-top: 20px;
+  color: var(--sky-blue-dark);
+}
+
+.login-footer a {
+  color: var(--sky-blue);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.login-footer a:hover {
+  color: var(--sky-blue-dark);
+  text-decoration: underline;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+body {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
